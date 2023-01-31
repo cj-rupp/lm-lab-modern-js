@@ -1,12 +1,9 @@
 // Instructions can be found in const_vs_let.md
 
-function countThePeople() {
-  const count = 0;
-  let people = ["Barbara", "Jacob", "Angela", "Brangela"];
-  people.forEach(() => (count += 1));
-  return count;
+const people = ["Barbara", "Jacob", "Angela", "Brangela"];
+
+export const countThePeople = () => {
+  return people.reduce((total,person) => total += 1, 0);
 }
 
-// console.log(countThePeople()); // <---- uncomment me!
-
-
+console.log(countThePeople());
